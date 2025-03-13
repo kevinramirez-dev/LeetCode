@@ -1,0 +1,29 @@
+Instructions:
+
+Given an integer array nums and an integer val, remove all occurrences of val in nums in-place.
+The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
+
+Consider the number of elements in nums which are not equal to val be k, to get accepted,
+you need to do the following things:
+
+    Change the array nums such that the first k elements of nums contain the elements which are not equal to val.
+    The remaining elements of nums are not important as well as the size of nums.
+
+    Return k.
+
+Thought process:
+    - We need to loop through the array and remove all occurences of the value given
+    - This must all be done in place so another array can't be created in order to solve the problem
+    - The return value must be equal to the number elements that are not equal to the val integer
+
+Application:
+    - We must first run a quick check to ensure there are elements on the array "if(nums.length == 0) return 0"
+    - Loop through the array (linear)
+        - If the number in the array [i] is not equal to the value give 'val'
+            - Then nums[k] will be equal to nums [i] (We had already established that k was set to 0 in the array so
+              the element will be mover to the beginning of the array)
+            - We increase k++ moving forward
+        -Return k
+
+
+

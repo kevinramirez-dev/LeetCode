@@ -1,0 +1,36 @@
+Instructions:
+Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once.
+ The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
+
+Consider the number of unique elements of nums to be k, to get accepted, you need to do the following things:
+
+    Change the array nums such that the first k elements of nums contain the unique elements in the order they were present
+    in nums initially. The remaining elements of nums are not important as well as the size of nums.
+
+    Return k.
+
+Thought process:
+    - We can implement a two pointer apporach
+        - One pointer 'j' will be used to populate unique numbers
+        - One pointer 'k' will scan forward to find unique numbers
+    - We should note that the input array is sorted in ascending order
+        - This means all of the duplicate numbers are grouped together
+        - After we have accounted for the elements at 'nums[j]'
+            - We will want to skip all of the elements that is equal to 'nums[j]'
+    - After we have process all of the numbers with pointer 'j'
+        - The value of 'i' will determine the size of the output array without duplicates
+
+Answer:
+    - Create a variable 'i' that will keep track of the current location we are pupulating
+    - Iterate through the indices of the input list, denoted as 'j'
+        - Pupulate 'nums[j]' at 'nums[i]'
+            - Increment 'i'
+
+        -While 'j' is not the last index and 'nums[j + 1]' is equal to 'nums[j]'
+            - Increment 'j'
+        - Return 'i', the length of the array without duplicates
+
+What is the time complexity?
+    - Time complexity = O(n) where the length of the input array
+        - O(n), visit each index once
+    - Space Complexity = O(1)

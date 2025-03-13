@@ -1,0 +1,25 @@
+Instructions:
+ ou are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two
+ integers m and n, representing the number of elements in nums1 and nums2 respectively.
+
+ Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+
+ The final sorted array should not be returned by the function, but instead be stored inside the array nums1.
+ To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should
+ be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
+
+
+Thoughts before coding:
+    - If we were trying to populate the 'nums1' from left -> right
+        - We will be overriding some of the elements inside 'nums1'
+        - So, we should be populating the values inside 'nums1' from 'right -> left'
+    - We can implement a 3 pointer approach
+        - One pointer 'i' will keep track of our position inside 'nums1'
+            - 'i' will initially be equal to 'm -1'
+        - One pointer 'j' will keep track of our position inside 'nums2'
+            - 'j' will initially be equal to 'n -1'
+        - One pointer 'k' will keep track of the index we are populating inside 'nums1'
+            - 'k' will be starting from the last index of 'nums1'
+    - In each of the iteration
+        - We will want to pick the larger value between the values at 'i' and 'j' to be
+        populated at 'k'
