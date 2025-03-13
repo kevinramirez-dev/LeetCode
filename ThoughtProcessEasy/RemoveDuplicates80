@@ -8,4 +8,17 @@ nums should hold the final result. It does not matter what you leave beyond the 
 Return k after placing the final result in the first k slots of nums.
 
 Thought Process:
-    -
+    - In the original array we have multiple copies of an integer, however the problem indicates that
+    we need to remove any element so that each appears ATLEAST twice.
+        - Let's just shift the elements over so that we exclude the elements that appear more than twice.
+        - We can use an integer 'k' to return the newly shifted array and exclude the numbers towards the end
+   - We need a two pointer system, when 'i' (first pointer) is set at 0 it will compare to our second pointer
+   'j'
+        - The two pointers will compare their element make sure that the element has been visisted atleast twice
+        - Once they verify, they will both shift over one
+   If the pointer shift and an element has been seen more than two times, out left pointer (i) will remain in the same
+   place and the right pointer 'j' will continue.
+        - This will accur until 'j' finds a new element to add to the first pointer (i)
+        - The process will repeat until the array is completed
+   There is a possibility of the array going out of bounds which means that we will have to set these paramaters
+   in the code. (j != nums.length && )

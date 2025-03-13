@@ -1,4 +1,4 @@
-public class RemoveElement27YT {
+public class RemoveElement27 {
     public int removeElement(int[] nums, int val) {
         if (nums.length == 0) return 0;
 
@@ -18,7 +18,7 @@ public class RemoveElement27YT {
 
         int [] nums = {1,2,2,3,4,5,6,7};
 
-        RemoveElement27YT obj = new RemoveElement27YT();
+        RemoveElement27 obj = new RemoveElement27();
 
         System.out.println(obj.removeElement(nums, 2));
 

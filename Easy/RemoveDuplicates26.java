@@ -1,4 +1,4 @@
-public class RemoveDuplicates26YT {
+public class RemoveDuplicates26 {
     public int removeDuplicates(int[] nums) {
         int i = 0;
 
@@ -16,7 +16,7 @@ public class RemoveDuplicates26YT {
 
         int [] nums = {1,2,2,3,3,4,5,6,7};
 
-        RemoveDuplicates26YT obj = new RemoveDuplicates26YT();
+        RemoveDuplicates26 obj = new RemoveDuplicates26();
 
         System.out.println(obj.removeDuplicates(nums));
     }
