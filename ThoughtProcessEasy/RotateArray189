@@ -1,4 +1,12 @@
 Instructions:
     - Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
 Thought process:
-    - 
+    - The goal of this question is to rotate integers from one side of the array to the opposite side by shifting
+    the numbers to the right.
+        - Variable "k" will indicate the amount of times that the array will be shifted
+        - It is important to note that the integers will be in incremental order
+    - A good way to think about this problem is to relate it to the real world.
+        - When a new case of bread in a store is being stocked, the old bread must be shifted to the front of the
+        shelf.
+        - The new bread will be placed in the back, this is to ensure that the merchandise doesn't go bad and it doesn't
+        cause any losses profit.
