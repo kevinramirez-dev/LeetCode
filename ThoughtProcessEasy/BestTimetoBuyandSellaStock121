@@ -1,0 +1,11 @@
+Instructions:
+    You are given an array prices where prices[i] is the price of a given stock on the ith day.
+
+    You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+
+    Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+Though Process:
+    - My intial apprach is to iterate through the array with a loop and comapre it to my initial value.
+        - It will be compare through the loop and check which of the values has the bigges "profit" difference
+
