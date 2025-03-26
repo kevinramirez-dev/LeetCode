@@ -9,4 +9,6 @@ Instructions:
       Return the minimum number of jumps to reach nums[n - 1]. The test cases are generated such that you can reach nums[n - 1].
 
 Thought Process:
-    - 
+    - Given that the array always procides a path to the end, we need to take the minimal amount of steps possible.
+        - Our starting point will always be index 0 and the number that we start with will be out threshold
+        - The pattern will continue until we find the most efficient path to the last index
